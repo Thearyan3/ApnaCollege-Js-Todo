@@ -1,0 +1,11 @@
+.ele{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 0.8px groove grey;
+    border-radius: 25%;
+}
+
+.line{
+    text-decoration: line-through;
+}
