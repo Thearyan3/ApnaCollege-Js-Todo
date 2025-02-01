@@ -6,6 +6,11 @@
     border-radius: 25%;
 }
 
+ul{
+    background-color: black;
+    color: white;
+}
+
 .line{
     text-decoration: line-through;
 }
@@ -14,4 +19,34 @@ body{
     background-image: url("bgImg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.bg{
+    height: 200px;
+    width: 200px;
+    border: 1px solid red;
+    border-radius: 4%;
+    background-color: greenyellow;
+}
+
+#add{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#clear{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+h2{
+    color: white;
+}
+
+input{
+    background-color: black;
+    color: white;
+    border: none;
 }
