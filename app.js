@@ -21,6 +21,7 @@ lis.addEventListener("click", function(event){
 btn.addEventListener("click", function () {
     let item = document.createElement("li");
     item.innerText = inp.value;
+    item.classList.add("item");
 
     let box = document.createElement("span");       // Create span for item                 
     box.classList.add("ele");                                  

@@ -7,20 +7,44 @@ body{
 
 .ele{
     display: inline-block;
+    position: absolute;
+    left: 15px;
     height: 10px;
     width: 10px;
     border: 0.8px groove grey;
     border-radius: 25%;
+    background-color: white;
+}
+
+.item{
+    /* text-align: left; */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.fa-solid{
+    font-size: 11px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
 }
 
 ul{
-    background-color: black;
-    color: white;
-    height: 7.5rem;
-    overflow-y: auto;
+    position: relative;
+    margin: 0;
 }
 
-ul::-webkit-scrollbar {
+.ul{
+    background-color: black;
+    color: white;
+    height: 10rem;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.ul::-webkit-scrollbar {
     display: none;  /* Hides the scrollbar */
   }
 
@@ -35,14 +59,17 @@ body{
 }
 
 .bg{
+    margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     text-align: center;
     height: 15rem;
     width: 15rem;
     border: 1px solid red;
     border-radius: 4%;
     background-color: greenyellow;
+    padding: 1rem;
 }
 
 #add{
@@ -59,6 +86,7 @@ body{
 
 h2{
     color: white;
+text-align: center;
 }
 
 input{
