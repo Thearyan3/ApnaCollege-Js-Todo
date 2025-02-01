@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <h2>To-Do List</h2>
     <div class="bg">
-    <input placeholder="Add a task">
-    <button id="add">Add</button>
-        <ul style="list-style-type: none;">
-            <!-- <li>Eat <i class="fa-solid fa-trash"></i></li>
-            <li>Sleep <i class="fa-solid fa-trash"></i></li> -->
-        </ul>
-    <button id="clear">Clear List</button>
-</div>
-<script src="app.js"></script>
+        <div class="Input">
+            <input placeholder="Add a task">
+            <button id="add">Add</button>
+        </div>
+        <div class="ul">
+            <ul style="list-style-type: none;">
+                <li>Eat <i class="fa-solid fa-trash"></i></li>
+                <li>Sleep <i class="fa-solid fa-trash"></i></li>
+            </ul>
+        </div>
+
+        <div class="button">
+            <button id="clear">Clear List</button>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>

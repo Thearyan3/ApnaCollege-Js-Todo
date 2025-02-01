@@ -1,3 +1,10 @@
+body{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;
+    font-style: normal; */
+}
+
 .ele{
     display: inline-block;
     height: 10px;
@@ -9,7 +16,13 @@
 ul{
     background-color: black;
     color: white;
+    height: 7.5rem;
+    overflow-y: auto;
 }
+
+ul::-webkit-scrollbar {
+    display: none;  /* Hides the scrollbar */
+  }
 
 .line{
     text-decoration: line-through;
@@ -22,8 +35,11 @@ body{
 }
 
 .bg{
-    height: 200px;
-    width: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 15rem;
+    width: 15rem;
     border: 1px solid red;
     border-radius: 4%;
     background-color: greenyellow;
