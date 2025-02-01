@@ -9,3 +9,9 @@
 .line{
     text-decoration: line-through;
 }
+
+body{
+    background-image: url("bgImg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
