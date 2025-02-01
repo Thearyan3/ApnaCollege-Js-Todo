@@ -5,17 +5,17 @@ let lis = document.querySelector("ul");
 
 lis.addEventListener("click", function (event) {
     if (event.target.nodeName === "I") {
-        let listItem = event.target.parentElement;            
+        let listItem = event.target.parentElement;
         listItem.remove();
     }
 });
 
-lis.addEventListener("click", function(event){
-    if(event.target.nodeName === "SPAN"){
+lis.addEventListener("click", function (event) {
+    if (event.target.nodeName === "SPAN") {
         let check = document.createElement("i");          // Create delete icon
         check.classList.add("fa-solid", "fa-check");
 
-        let text = event.target.parentElement;               
+        let text = event.target.parentElement;
         text.classList.add("line");
 
         let icon = text.querySelector('i');
@@ -28,7 +28,9 @@ lis.addEventListener("click", function(event){
 
 //Eventlistener to handle creating list items when button is clicked
 btn.addEventListener("click", function (event) {
-    if(inp.value.trim() === ""){
+    if (inp.value.trim() === "") {
+        Clr.classList.add("hidden");
+        lis.classList.add("hidden");
         event.preventDefault();
         return;
     }
@@ -38,7 +40,7 @@ btn.addEventListener("click", function (event) {
     item.classList.add("item");
 
     let box = document.createElement("span");       // Create span for item                 
-    box.classList.add("ele");                                  
+    box.classList.add("ele");
 
     let del = document.createElement("i");          // Create delete icon
     del.classList.add("fa-solid", "fa-trash");
@@ -52,7 +54,9 @@ btn.addEventListener("click", function (event) {
 // Eventlistener to handle creating list items when Enter key is pressed
 inp.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-        if(inp.value.trim() === ""){
+        if (inp.value.trim() === "") {
+            Clr.classList.add("hidden");
+            lis.classList.add("hidden");
             event.preventDefault();
             return;
         }
@@ -62,7 +66,7 @@ inp.addEventListener("keypress", function (event) {
         item.classList.add("item");
 
         let box = document.createElement("span");       // Create span for item                  
-        box.classList.add("ele");                                   
+        box.classList.add("ele");
 
         let del = document.createElement("i");          // Create delete icon
         del.classList.add("fa-solid", "fa-trash");
@@ -75,7 +79,11 @@ inp.addEventListener("keypress", function (event) {
 });
 
 // Clear the list when the Clr button is clicked
-Clr.addEventListener("click", function() {
+Clr.addEventListener("click", function (event) {
+
     // Clear the entire list
-           lis.innerHTML = "";                                            
+    lis.innerHTML = "";
+
+    Clr.classList.add("hidden");
+    lis.classList.add("hidden");
 });

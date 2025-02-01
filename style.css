@@ -43,11 +43,6 @@ body {
     left: -18px;
 }
 
-/* ul{
-    position: relative;
-    margin: 0;
-} */
-
 .ul {
     background-color: black;
     color: white;
@@ -96,6 +91,15 @@ body {
     background-color: black;
     color: white;
     border: none;
+    display: block;
+}
+
+#lis{
+    display: block;
+}
+
+#clear.hidden, #lis.hidden{
+    display: none;
 }
 
 h2 {
