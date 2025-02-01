@@ -41,7 +41,7 @@ body {
 }
 
 .ul {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     color: white;
     margin: 0;
 }
@@ -68,9 +68,9 @@ body {
     flex-direction: column;
     text-align: center;
     width: 15rem;
-    border: 1px solid red;
+    border: none;
     border-radius: 4%;
-    background-color: greenyellow;
+    background-color: rgb(24, 24, 24);
     padding: 1rem;
     min-height: 1.5rem; /* Ensure it has some height initially */
     transition: height 0.3s ease; /* Smooth transition for height change */
@@ -82,10 +82,21 @@ body {
     border: none;
 }
 
+#add:hover{
+    cursor: pointer;
+}
+
+
 #clear {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 30px;
     color: white;
     border: none;
+}
+
+#clear:hover{
+    cursor: pointer;
 }
 
 #lis {
@@ -102,11 +113,11 @@ h2 {
 input {
     background-color: black;
     color: white;
-    border: none;
+    border: 1px solid lightseagreen;
 }
 
 #listWrapper {
-    margin-top: 20px;
+    margin-top: 1.5px;
     transition: all 0.3s ease; /* Smooth transition for visibility and height */
 }
 
