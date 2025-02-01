@@ -1,8 +1,5 @@
 body {
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    /* font-weight: <weight>;
-    font-style: normal; */
 }
 
 .ele {
@@ -46,14 +43,11 @@ body {
 .ul {
     background-color: black;
     color: white;
-    height: 10rem;
-    overflow-y: auto;
     margin: 0;
 }
 
-.ul::-webkit-scrollbar {
+#lis::-webkit-scrollbar {
     display: none;
-    /* Hides the scrollbar */
 }
 
 .line {
@@ -73,12 +67,13 @@ body {
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
-    height: 15rem;
     width: 15rem;
     border: 1px solid red;
     border-radius: 4%;
     background-color: greenyellow;
     padding: 1rem;
+    min-height: 1.5rem; /* Ensure it has some height initially */
+    transition: height 0.3s ease; /* Smooth transition for height change */
 }
 
 #add {
@@ -91,15 +86,12 @@ body {
     background-color: black;
     color: white;
     border: none;
-    display: block;
 }
 
-#lis{
+#lis {
     display: block;
-}
-
-#clear.hidden, #lis.hidden{
-    display: none;
+    overflow-y: auto;
+    height: 4rem;
 }
 
 h2 {
@@ -111,4 +103,14 @@ input {
     background-color: black;
     color: white;
     border: none;
+}
+
+#listWrapper {
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Smooth transition for visibility and height */
+}
+
+#listWrapper.hidden {
+    display: none; /* Completely hide the wrapper */
+    height: 0;      /* Collapse the space */
 }
