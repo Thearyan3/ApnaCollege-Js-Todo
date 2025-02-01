@@ -12,13 +12,27 @@ lis.addEventListener("click", function (event) {
 
 lis.addEventListener("click", function(event){
     if(event.target.nodeName === "SPAN"){
+        let check = document.createElement("i");          // Create delete icon
+        check.classList.add("fa-solid", "fa-check");
+
         let text = event.target.parentElement;               
         text.classList.add("line");
+
+        let icon = text.querySelector('i');
+        icon.style.color = "white";
+
+        event.target.replaceWith(check);
+        lis.append(text);
     }
 });
 
 //Eventlistener to handle creating list items when button is clicked
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function (event) {
+    if(inp.value.trim() === ""){
+        event.preventDefault();
+        return;
+    }
+
     let item = document.createElement("li");
     item.innerText = inp.value;
     item.classList.add("item");
@@ -38,8 +52,14 @@ btn.addEventListener("click", function () {
 // Eventlistener to handle creating list items when Enter key is pressed
 inp.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+        if(inp.value.trim() === ""){
+            event.preventDefault();
+            return;
+        }
+
         let item = document.createElement("li");
         item.innerText = inp.value;
+        item.classList.add("item");
 
         let box = document.createElement("span");       // Create span for item                  
         box.classList.add("ele");                                   
