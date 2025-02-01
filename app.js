@@ -38,19 +38,21 @@ inp.addEventListener("keypress", function (event) {
         let item = document.createElement("li");
         item.innerText = inp.value;
 
-        let box = document.createElement("div");
+        let box = document.createElement("span");
         box.classList.add("ele");
 
         let del = document.createElement("i");
         del.classList.add("fa-solid", "fa-trash");
 
-        item.prepend(box);
+        item.insertAdjacentElement("afterbegin", box);
         item.appendChild(del);
         lis.append(item);
         inp.value = "";
     }
 });
 
-Clr.addEventListener("click", function () {
-    lis.remove();
+Clr.addEventListener("click", function (event) {
+    if (event.target.nodeName === "BUTTON") {
+        lis.remove();
+    }
 });
